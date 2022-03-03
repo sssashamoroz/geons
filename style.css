@@ -20,3 +20,8 @@
     right: 0;
     text-align: center;
   }
+
+  .paragraph{
+    text-align: justify;
+    text-align-last: center;
+  }

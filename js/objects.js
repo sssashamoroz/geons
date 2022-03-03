@@ -41,9 +41,13 @@ sphere.position.set(0, 0.5, 0);
 
 
 
-const light = new THREE.PointLight(0xFFFFFF, 1, 500);
-light.position.set(0, 8, 10);
-scene.add( light );
+const light_0 = new THREE.PointLight(0xFFFFFF, 0.7, 500);
+light_0.position.set(0, 8, 10);
+scene.add( light_0 );
+
+const light_1 = new THREE.AmbientLight( 0xFFFFFF, 0.3);
+scene.add( light_1 );
+
 
 camera.position.z = 5;
 
@@ -66,7 +70,7 @@ function moveLight(){
 
     const scroll_pos = document.body.getBoundingClientRect().top;
 
-    light.position.y = (scroll_pos * 0.08)+8;
+    light_0.position.y = (scroll_pos * 0.08)+8;
     camera.position.y = scroll_pos * 0.005;
 
     
